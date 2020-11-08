@@ -1,5 +1,5 @@
 # Nobia
-Quieres pregutarle a alguien si quiere ser tu novia?
+Quieres pregutarle a alguien si quiere ser tu novio?
 
 Con este script jamas obtendras un no por respuesta
 
