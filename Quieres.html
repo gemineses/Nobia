@@ -6,13 +6,89 @@
     <title>Nobia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
-        body {
-            background-color: pink;
+        .main {
+            background-image: url('img003.jpg');
+            width: 100%;
+            height: 100%;
+            right: 0px;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            position: absolute;
+        }
+        .carta {
+            background-image: url('img04.jpg');
+            width: 100%;
+            height: 100%;
+            right: 0px;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center; 
+            background-size: 100%;
+            visibility: hidden;
+        }
+        .nombres {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 150px;
+            color: white;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(20, 20, 20, 0.1);
+            text-align: center;
+            font-family: 'Helvetica';
+            
+        }
+        .nombresparraf{
+            margin-bottom: 0px;
+        }
+        .question{
+            background-color: rgba(20, 20, 20, 0.2);
+            margin-top: 0px;
+        }
+        .button{
+            height: 100px;
+            width: 200px;
+            background-color: #ffd2b4;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .button:hover{
+            background-color: #664732;
+        }
+        .cartacontainer{
+            background-color: rgba(20, 20, 20, 0.5);
+            height: 80%;
+        }
+        .cartacontainer #encabezado{
+            font-size: 44px;
+            font-weight: 800;
+            margin-left: 10%;
+            font-family: Garamond, serif;
+        }
+        .cartacontainer #contenido{
+            font-size: 20px;
+            font-family: Garamond, serif;
+            font-size: 20px;
+            margin-left: 25%;
+            font-weight: 600;
+            color: white;
+        }
+        .cartacontainer #firma{
+            font-size: 20px;
+            font-family: Garamond, serif;
+            margin-left: 80%;
+            color: white;
         }
     </style>
     <script>
         function accionParaCuandoEllaDigaQueSi(){
-            alert('ahora ya somos nobios <3');
+            document.getElementById('main').style.visibility = "hidden";
+            document.getElementById('carta').style.visibility = "visible";
         }
 
         function mueveElBoton(){
@@ -22,7 +98,7 @@
             newWidth = (Math.random() * width);
             newHeight = (Math.random() * height);
 
-            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.position = "fixed";
             document.getElementById('btnNo').style.left = newWidth + "px";
             document.getElementById('btnNo').style.top = newHeight + "px";
             
@@ -31,10 +107,40 @@
     </script>
 </head>
 <body>
-    <h3>Quieres ser mi nobia?</h3>
-    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
-    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
-    <img src="chuec.png" width="200">
+    <div class="main" id="main">
+        <div class="nombres">
+            <p class="nombresparraf">
+                MIGUEL Y ARTURO
+            </p>
+            <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" class="button" />
+            <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" class="button" />
+            <h3 class="question">Quieres ser mi esposo?</h3>
+        </div>
+    </div>
+    <div class="carta" id="carta">
+        <div class="cartacontainer">
+            <p id="encabezado">
+                encabezado jasdhfkjdsf
+            </p>
+            <p id="contenido">
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+                texto jasdfhlsdhf liushd kfjhldkf asdlufh alsdujf lausjdhf  asodjfh alsdufh  asdofh sadf <br />
+            </p>
+            <p id="firma">
+                de mi para ti <br />
+            </p>
+        </div>
+    </div>
     <script data-ad-client="ca-pub-5256571628087294" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>
