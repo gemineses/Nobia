@@ -7,7 +7,20 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
         body {
-            background-color: pink;
+            background-color: #2a333e;
+            color: white;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid white;
+            padding: 10px;
+        }
+        input {
+            font-size: 20px;
         }
     </style>
     <script>
@@ -31,9 +44,13 @@
     </script>
 </head>
 <body>
-    <h3>Quieres ser mi nobia?</h3>
-    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
-    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
-    <img src="chuec.png" width="200">
+    <div class="center">
+        <h3>Quieres ser mi Novio?</h3>
+        <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
+        <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+        <div class="image">
+            <img src="chuec.png" width="600">
+        </div>
+    </div>
 </body>
 </html>
