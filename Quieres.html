@@ -7,12 +7,30 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
         body {
-            background-color: pink;
+        }
+        input {
+            background-color: black;
+            color: white;
+            font-size: 40px;
+        } 
+        .container{
+            margin: 0 auto;
+            width: 100px;
+            display: block;     
+        }
+        .buttons{
+            width: 500px;
+        }
+        .buttons input{
+            margin-right: 80px;
+        }
+        h3{
+            width: 200px;
         }
     </style>
     <script>
         function accionParaCuandoEllaDigaQueSi(){
-            alert('ahora ya somos nobios <3');
+            alert('Faa que chico con suerte !!!!');
         }
 
         function mueveElBoton(){
@@ -31,9 +49,12 @@
     </script>
 </head>
 <body>
-    <h3>Quieres ser mi nobia?</h3>
-    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
-    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
-    <img src="chuec.png" width="200">
+    <div class="container">
+        <h3>Quieres ser mi novia?</h3>
+        <div class="buttons">
+            <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
+            <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+        </div>
+    </div>
 </body>
 </html>
